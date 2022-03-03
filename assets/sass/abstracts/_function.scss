@@ -1,0 +1,11 @@
+// Font percentage for responsive calculations
+@function calcFontPercentage($desiredValue) {
+    $result: ($desiredValue / 16) * 100;
+    @return $result * 1%;
+}
+
+// Width of column as per number of columns
+@function columns($n) {
+    $result: 100% / $n;
+    @return $result;
+}

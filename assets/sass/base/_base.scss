@@ -1,0 +1,32 @@
+/** ========= RESET ========= */
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: calcFontPercentage(10);
+}
+
+body{
+    box-sizing: border-box;
+    position: relative;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+img, video, iframe{
+  max-width: 100%;
+  display: block;
+}
+
+a{
+    transition: .25s all ease;
+    color: inherit;
+}
