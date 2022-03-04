@@ -22,4 +22,10 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss">
+.tab__content {
+  padding: 3rem 4rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 0.2rem 1.2rem rgba($black, 0.08);
+}
+</style>

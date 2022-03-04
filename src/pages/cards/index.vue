@@ -2,8 +2,8 @@
   <content-box>
     <content-header />
     <tabs>
-      <tab-item title="Title 1">Data 1</tab-item>
-      <tab-item title="Title 2">Data 2</tab-item>
+      <tab-item title="My debit cards">Data 1</tab-item>
+      <tab-item title="All company cards">Data 2</tab-item>
     </tabs>
   </content-box>
 </template>
