@@ -1,6 +1,6 @@
 // Theme Colors
-$primary: #c8d03c;
-$secondary: #616a64;
+$primary: #01D167;
+$secondary: #0C365A;
 
 // State Colors
 $success: #5dc0a6;
@@ -11,6 +11,7 @@ $info: #0075f6;
 // General Colors
 $black: #000;
 $white: #fff;
+$white-03: rgba($white, 0.3);
 
 // Gray Colors
 $gray-100: #FAFBFE;
@@ -20,6 +21,9 @@ $gray-400: #333333;
 $gray-500: #181b31;
 
 // Typography
-$font-family-primary: 'Lato', sans-serif;
+$font-family-primary: 'Open Sans', sans-serif;
 $font-family-secondary: 'Livvic', sans-serif;
 $font-size: 1.6rem;
+
+// Sidebar
+$sidebar-width: 34rem;

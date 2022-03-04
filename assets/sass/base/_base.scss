@@ -27,6 +27,9 @@ img, video, iframe{
 }
 
 a{
+    &:hover{
+        text-decoration: none;
+    }
     transition: .25s all ease;
     color: inherit;
 }
