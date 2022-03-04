@@ -3,7 +3,7 @@
     <content-header />
     <tabs>
       <tab-item title="My debit cards">
-        <Splide :options="splideOptions">
+        <Splide :options="splideOptions" class="mb-32">
           <SplideSlide>
             <card :card="card" />
           </SplideSlide>
@@ -11,6 +11,7 @@
             <card :card="card" />
           </SplideSlide>
         </Splide>
+        <card-actions :actions="actions" />
       </tab-item>
       <tab-item title="All company cards">
         <h1>No Content</h1>
@@ -26,6 +27,7 @@ import Tabs from "@/components/Ui/Tab";
 import TabItem from "@/components/Ui/Tab/Item";
 
 import Card from "@/components/Card";
+import CardActions from "@/components/Card/Actions";
 export default {
   data() {
     return {
@@ -34,6 +36,28 @@ export default {
         arrows: false,
         type: "slide",
       },
+      actions: [
+        {
+          title: "Freeze <br/> card",
+          icon: "Freeze-card",
+        },
+        {
+          title: "Set spend <br/> limit",
+          icon: "Set-spend-limit",
+        },
+        {
+          title: "Add to <br/> GPay",
+          icon: "GPay",
+        },
+        {
+          title: "Replace <br/> card",
+          icon: "Replace-card",
+        },
+        {
+          title: "Cancel <br/> card",
+          icon: "Deactivate-card",
+        },
+      ],
     };
   },
   components: {
@@ -42,6 +66,7 @@ export default {
     Tabs,
     TabItem,
     Card,
+    CardActions,
   },
   computed: {
     card() {
