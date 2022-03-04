@@ -3,7 +3,14 @@
     <content-header />
     <tabs>
       <tab-item title="My debit cards">
-        <card :card="card" />
+        <Splide :options="splideOptions">
+          <SplideSlide>
+            <card :card="card" />
+          </SplideSlide>
+          <SplideSlide>
+            <card :card="card" />
+          </SplideSlide>
+        </Splide>
       </tab-item>
       <tab-item title="All company cards">
         <h1>No Content</h1>
@@ -23,6 +30,10 @@ export default {
   data() {
     return {
       isNumberVisible: false,
+      splideOptions: {
+        arrows: false,
+        type: "slide",
+      },
     };
   },
   components: {
