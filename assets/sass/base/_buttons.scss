@@ -1,0 +1,36 @@
+.btn{
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 1rem 1.2rem;
+    font-size: 1.3rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+
+// Type
+.btn{
+    // Icon
+    &--icon{
+        display: flex;
+        align-items: center;
+        & > *:first-child{
+            margin-right: 0.8rem;
+        }
+    }
+}
+
+// Colors
+.btn {
+    &--secondary-lt {
+      background: $secondary-lt !important;
+      color: $white;
+    }
+}

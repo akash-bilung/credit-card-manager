@@ -1,9 +1,7 @@
 <template>
   <div class="wrapper">
     <sidebar />
-    <div class="content">
-      <router-view />
-    </div>
+    <router-view />
   </div>
 </template>
 <script>

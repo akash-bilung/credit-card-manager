@@ -27,7 +27,7 @@ img, video, iframe{
 }
 
 a{
-    &:hover{
+    &, &:hover{
         text-decoration: none;
     }
     color: inherit;

@@ -2,8 +2,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
 body{
-    font-family: $font-family-primary;
-    font-weight: 400;
-    font-size: $font-size;
-    color: $gray-400;
+  font-family: $font-family-primary;
+  font-weight: 400;
+  font-size: $font-size;
+  color: $gray-400;
+}
+
+// Font Size
+.font{
+  &--sm{
+      font-size: 1.4rem;
+  }
+}
+
+// Text Colors
+.text {
+  @each $name, $color in $theme {
+    &--#{$name} {
+      color: $color !important;
+    }
+  }
+}
+
+// Font weight
+.font{
+  &--semibold{
+    font-weight: 600;
+  }
+  &--bold{
+    font-weight: 700;
+  }
 }

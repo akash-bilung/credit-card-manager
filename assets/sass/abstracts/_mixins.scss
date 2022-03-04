@@ -145,7 +145,8 @@ $theme: () !default;
 $theme: map-merge(
   (
     "primary": $primary,
-    "secondary": $secondary
+    "secondary": $secondary,
+    "gray-400": $gray-400
   ),
   $theme
 );
