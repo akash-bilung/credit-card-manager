@@ -3,6 +3,7 @@ $splide-dot: 0.8rem;
 .splide{
     &__pagination{
         position: static;
+        margin-top: 1.6rem;
         & > li{
             &:not(:last-child){
                 margin-right: 0.8rem;
