@@ -1,8 +1,8 @@
 <template>
   <aside class="sidebar">
-    <div class="sidebar-header">
-      <img src="/images/base/Logo.svg" class="sidebar-header-logo" />
-      <p class="sidebar-header-title">
+    <div class="sidebar__header">
+      <img src="/images/base/Logo.svg" class="sidebar__header_logo" />
+      <p class="sidebar__header_title">
         Trusted way of banking for 3,000+ SMEs and startups in Singapore
       </p>
     </div>
@@ -27,12 +27,12 @@ export default {
   background: $secondary;
   padding: 4.8rem;
 
-  &-header {
-    &-logo {
+  &__header {
+    &_logo {
       max-width: 12.5rem;
       margin-bottom: 1.9rem;
     }
-    &-title {
+    &_title {
       font-size: 1.5rem;
       color: $white-03;
     }

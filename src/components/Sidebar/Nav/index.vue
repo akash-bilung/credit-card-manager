@@ -1,6 +1,6 @@
 <template>
   <svg-sprite />
-  <ul class="sidebar-nav">
+  <ul class="sidebar__nav">
     <li v-for="(nav, index) in navigations" :key="index">
       <router-link :to="nav.url">
         <img :src="`/icons/${nav.icon}.svg`" />
@@ -48,7 +48,7 @@ export default {
 </script>
 
 <style lang="scss">
-.sidebar-nav {
+.sidebar__nav {
   padding-top: 8.1rem;
   & > li {
     &:not(:last-child) {
