@@ -3,15 +3,22 @@
     <content-header />
     <tabs>
       <tab-item title="My debit cards">
-        <Splide :options="splideOptions" class="mb-32">
-          <SplideSlide>
-            <card :card="card" />
-          </SplideSlide>
-          <SplideSlide>
-            <card :card="card" />
-          </SplideSlide>
-        </Splide>
-        <card-actions :actions="actions" />
+        <div class="card__row">
+          <div class="card__col--lt">
+            <Splide :options="splideOptions" class="mb-32">
+              <SplideSlide>
+                <card :card="card" />
+              </SplideSlide>
+              <SplideSlide>
+                <card :card="card" />
+              </SplideSlide>
+            </Splide>
+            <card-actions :actions="actions" />
+          </div>
+          <div class="card__col--rt">
+            <accordion title="Recent transactions"> Hello </accordion>
+          </div>
+        </div>
       </tab-item>
       <tab-item title="All company cards">
         <h1>No Content</h1>
@@ -28,6 +35,8 @@ import TabItem from "@/components/Ui/Tab/Item";
 
 import Card from "@/components/Card";
 import CardActions from "@/components/Card/Actions";
+
+import Accordion from "@/components/Ui/Accordion";
 export default {
   data() {
     return {
@@ -67,6 +76,7 @@ export default {
     TabItem,
     Card,
     CardActions,
+    Accordion,
   },
   computed: {
     card() {
