@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <div class="card__logo">
-      <img :src="card.bank.url" alt="" />
+      <img src="/images/base/Logo-light.svg" alt="" />
     </div>
     <div class="card__title font--bold">{{ card.name }}</div>
     <ul class="card__number">

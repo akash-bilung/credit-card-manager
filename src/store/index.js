@@ -22,6 +22,9 @@ const cardsModule = {
       });
       context.dispatch("setSingleCard", data[0]);
     },
+    addCard(context, payload) {
+      context.commit("addCard", payload);
+    },
     setCards(context, payload) {
       context.commit("setCards", payload);
     },
@@ -30,6 +33,9 @@ const cardsModule = {
     },
   },
   mutations: {
+    addCard(state, payload) {
+      state.cards.push(payload);
+    },
     setCards(state, payload) {
       state.cards = payload;
     },

@@ -1,9 +1,6 @@
 {
     "data":[
        {
-          "bank":{
-             "url":"/images/base/Logo-light.svg"
-          },
           "name":"Mark Henry",
           "numbers":"1234567890123456",
           "expiry":"2022-03-11T18:30:00.000Z",
@@ -11,9 +8,6 @@
           "type":"visa"
        },
        {
-          "bank":{
-             "url":"/images/base/Logo-light.svg"
-          },
           "name":"Mark Henry",
           "numbers":"1234567890123456",
           "expiry":"2022-03-11T18:30:00.000Z",
@@ -21,9 +15,6 @@
           "type":"visa"
        },
        {
-          "bank":{
-             "url":"/images/base/Logo-light.svg"
-          },
           "name":"Mark Henry",
           "numbers":"1234567890123456",
           "expiry":"2022-03-11T18:30:00.000Z",
@@ -31,9 +22,6 @@
           "type":"visa"
        },
        {
-          "bank":{
-             "url":"/images/base/Logo-light.svg"
-          },
           "name":"Mark Henry",
           "numbers":"1234567890123456",
           "expiry":"2022-03-11T18:30:00.000Z",

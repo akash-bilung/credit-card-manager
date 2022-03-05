@@ -2,17 +2,13 @@
   <form action="" id="form" @submit.prevent="submitForm">
     <div class="form__group">
       <label for="">Full Name</label>
-      <input
-        type="text"
-        v-model="form.fullname"
-        placeholder="Enter Full Name"
-      />
+      <input type="text" v-model="form.name" placeholder="Enter Full Name" />
     </div>
     <div class="form__group">
       <label for="">Card Number</label>
       <input
         type="text"
-        v-model="form.number"
+        v-model="form.numbers"
         placeholder="Enter Card Number"
       />
     </div>
@@ -39,11 +35,12 @@ export default {
   data() {
     return {
       form: {
-        fullname: "",
+        name: "",
         // Add this by default
-        number: Math.floor(Math.random() * 1e16),
+        numbers: `${Math.floor(Math.random() * 1e16)}`,
         expiry: this.randomDate(new Date(), new Date(2050, 0, 1)),
         cvv: "777",
+        type: "visa",
       },
     };
   },
@@ -54,7 +51,8 @@ export default {
       );
     },
     submitForm() {
-      console.log(this.form);
+      // console.log(this.form);
+      this.$store.dispatch("cards/addCard", this.form);
     },
   },
 };
