@@ -87,6 +87,9 @@ export default {
       letter-spacing: 2px;
       &:not(:last-child) {
         margin-right: 2.7rem;
+        @include responsive(handhelds) {
+          margin-right: 1rem;
+        }
       }
     }
   }

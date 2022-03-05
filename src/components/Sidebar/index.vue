@@ -37,5 +37,9 @@ export default {
       color: $white-03;
     }
   }
+
+  @include responsive(handhelds) {
+    display: none;
+  }
 }
 </style>

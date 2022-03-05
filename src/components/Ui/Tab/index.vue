@@ -41,6 +41,10 @@ export default {
     display: flex;
     align-items: center;
     margin-bottom: 1.6rem;
+    @include responsive(handhelds) {
+      padding: $gutter-sm $gutter-sm 0;
+      margin-bottom: 0;
+    }
     & > li {
       padding-bottom: 0.5rem;
       border-bottom: 0.2rem solid transparent;
@@ -51,6 +55,12 @@ export default {
         border-color: $blue;
         color: $gray-400;
         font-weight: 700;
+      }
+      @include responsive(handhelds) {
+        color: rgba($white, 0.3);
+        &.active {
+          color: $white;
+        }
       }
       &:not(:last-child) {
         margin-right: 3.2rem;

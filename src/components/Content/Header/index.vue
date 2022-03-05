@@ -6,7 +6,7 @@
         <span class="header__amount-cur font--bold">S$</span>
         <span class="header__amount-num font--bold">{{ balance }}</span>
       </div>
-      <button class="btn btn--secondary-lt btn--icon">
+      <button class="btn btn--secondary-lt btn--icon header__btn">
         <img width="16" src="/icons/box.svg" alt="" />
         <span class="font--bold">New Card</span>
       </button>
@@ -27,11 +27,28 @@ export default {
 
 <style lang="scss">
 .header {
+  @include responsive(handhelds) {
+    color: $white;
+    padding: ($gutter-sm * 2) $gutter-sm $gutter-sm;
+  }
   &__actions {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 3.7rem;
+    @include responsive(handhelds) {
+      margin-bottom: 0;
+    }
+    .header__btn {
+      @include responsive(handhelds) {
+        background: transparent;
+        padding: 0;
+        color: $blue;
+        & > img {
+          @include recolor($blue, 1);
+        }
+      }
+    }
   }
   &__amount {
     display: flex;

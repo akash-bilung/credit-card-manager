@@ -3,7 +3,7 @@
     <content-header :balance="balance" />
     <tabs>
       <tab-item title="My debit cards">
-        <div class="flex flex-hCenter mb-12">
+        <div class="flex flex-hCenter mb-12 card__number_btn">
           <button
             class="btn--link btn--icon text--primary font--bold"
             type="button"
@@ -148,3 +148,20 @@ export default {
   },
 };
 </script>
+<style lang="scss">
+.card {
+  &__number {
+    &_btn {
+      @include responsive(handhelds) {
+        margin-bottom: -1.2rem;
+        justify-content: flex-end;
+        & > button {
+          padding: 0.8rem 1rem 2rem;
+          border-radius: 0.5rem 0.5rem 0 0;
+          background: $white;
+        }
+      }
+    }
+  }
+}
+</style>

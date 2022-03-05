@@ -25,4 +25,9 @@ $splide-dot: 0.8rem;
             }
         }
     }
+    &__slide{
+        @include responsive(handhelds){
+            padding: 0 $gutter-sm;
+        }
+    }
 }

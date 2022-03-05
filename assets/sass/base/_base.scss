@@ -15,6 +15,9 @@ html{
 body{
     box-sizing: border-box;
     position: relative;
+    @include responsive(handhelds){
+        background: $secondary;
+    }
 }
 
 ul, ol{
