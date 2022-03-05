@@ -14,9 +14,7 @@
       </button>
     </div>
     <template v-if="isOpen">
-      <div class="accordion__content">
-        <slot />
-      </div>
+      <slot />
     </template>
   </div>
 </template>
@@ -51,7 +49,7 @@ export default {
     border-radius: 0.8rem;
     border: 1px solid transparent;
     position: relative;
-    z-index: 1;
+    z-index: 2;
     &_icon,
     &_btn {
     }
@@ -73,12 +71,6 @@ export default {
         }
       }
     }
-  }
-
-  &__content {
-    border: 1px solid $gray-120;
-    margin-top: -0.5rem;
-    padding: 2.4rem;
   }
 }
 </style>

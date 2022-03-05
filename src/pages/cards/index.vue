@@ -16,8 +16,14 @@
             <card-actions :actions="actions" />
           </div>
           <div class="card__col--rt">
+            <accordion title="Card details" icon="Assets" class="mb-24">
+              <h4>Card details</h4>
+            </accordion>
             <accordion title="Recent transactions" icon="Transactions">
-              Hello
+              <accordion-content>
+                <card-list :lists="transactions" />
+              </accordion-content>
+              <accordion-footer title="View all card transactions" />
             </accordion>
           </div>
         </div>
@@ -37,8 +43,11 @@ import TabItem from "@/components/Ui/Tab/Item";
 
 import Card from "@/components/Card";
 import CardActions from "@/components/Card/Actions";
+import CardList from "@/components/Card/List";
 
 import Accordion from "@/components/Ui/Accordion";
+import AccordionContent from "@/components/Ui/Accordion/Content";
+import AccordionFooter from "@/components/Ui/Accordion/Footer";
 export default {
   data() {
     return {
@@ -69,6 +78,41 @@ export default {
           icon: "Deactivate-card",
         },
       ],
+      transactions: [
+        {
+          id: 1,
+          icon: "file-storage",
+          title: "Hamleys",
+          date: "20 May 2020",
+          label: {
+            text: "Refund on debit card",
+          },
+          amount: "+ S$ 150",
+          type: "debit",
+        },
+        {
+          id: 1,
+          icon: "file-storage",
+          title: "Hamleys",
+          date: "20 May 2020",
+          label: {
+            text: "Refund on debit card",
+          },
+          amount: "+ S$ 150",
+          type: "credit",
+        },
+        {
+          id: 1,
+          icon: "file-storage",
+          title: "Hamleys",
+          date: "20 May 2020",
+          label: {
+            text: "Refund on debit card",
+          },
+          amount: "+ S$ 150",
+          type: "credit",
+        },
+      ],
     };
   },
   components: {
@@ -79,6 +123,9 @@ export default {
     Card,
     CardActions,
     Accordion,
+    AccordionContent,
+    AccordionFooter,
+    CardList,
   },
   computed: {
     card() {

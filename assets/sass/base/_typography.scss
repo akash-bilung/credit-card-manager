@@ -10,6 +10,9 @@ body{
 
 // Font Size
 .font{
+  &--xs{
+      font-size: 1.3rem;
+  }
   &--sm{
       font-size: 1.4rem;
   }
