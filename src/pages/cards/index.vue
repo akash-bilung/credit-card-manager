@@ -3,6 +3,16 @@
     <content-header />
     <tabs>
       <tab-item title="My debit cards">
+        <div class="flex flex-hCenter mb-12">
+          <button
+            class="btn--link btn--icon text--primary font--bold"
+            type="button"
+            @click.prevent="showCardNumbers"
+          >
+            <img src="/icons/eye-open.svg" alt="" />
+            <span>Show card number</span>
+          </button>
+        </div>
         <div class="card__row">
           <div class="card__col--lt">
             <Splide :options="splideOptions" class="mb-32">
@@ -130,7 +140,7 @@ export default {
   computed: {
     card() {
       let card = {
-        visible: this.isNumberVisible,
+        visible: false,
         bank: "/images/base/Logo-light.svg",
         title: "Mark Henry",
         numbers: ["1234", "5678", "9012", "3456"],

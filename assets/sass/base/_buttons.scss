@@ -25,6 +25,12 @@
             margin-right: 0.8rem;
         }
     }
+    // Normal link like buttons
+    &--link{
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
 }
 
 // Colors

@@ -5,6 +5,9 @@
     &-1{
         margin-bottom: 1rem;
     }
+    &-12{
+        margin-bottom: 1.2rem;
+    }
     &-14{
         margin-bottom: 1.4rem;
     }
@@ -16,5 +19,15 @@
     }
     &-32{
         margin-bottom: 3.2rem;
+    }
+}
+
+.flex{
+    display: flex;
+    &-vCenter{
+        align-items: center;
+    }
+    &-hCenter{
+        justify-content: center;
     }
 }
