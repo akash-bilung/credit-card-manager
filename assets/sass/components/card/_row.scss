@@ -1,0 +1,23 @@
+$gutter: 2rem;
+.card{
+    &__row{
+        display: flex;
+        align-items: flex-start;
+        margin-left: -$gutter;
+        margin-right: -$gutter;
+    }
+    &__col{
+        &--lt,
+        &--rt{
+            width: columns(2);
+            padding-left: $gutter;
+            padding-right: $gutter;
+        }
+        &--lt{
+
+        }
+        &--rt{
+
+        }
+    }
+}
