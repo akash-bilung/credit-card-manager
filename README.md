@@ -24,7 +24,7 @@ The app requires [Node.js](https://nodejs.org/) v10+ to run.
 Install the dependencies and devDependencies and start the server.
 
 ##### For development environments
-#
+
 ```sh
 cd aspire-fe-test
 npm install
@@ -32,14 +32,12 @@ npm run serve
 ```
 
 ##### For production environments
-#
 
 ```sh
 npm run build
 ```
 
 ##### Lints and fixes files
-#
 
 ```sh
 npm run lint
