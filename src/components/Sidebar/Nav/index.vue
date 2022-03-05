@@ -72,6 +72,29 @@ export default {
           @include recolor($primary, 1);
         }
       }
+
+      @include responsive(handhelds) {
+        color: $gray-200;
+        flex-direction: column;
+        font-size: 0.9rem;
+        & > img {
+          margin-right: 0;
+          margin-bottom: 0.5rem;
+          @include recolor($gray-200, 1);
+        }
+      }
+    }
+  }
+
+  @include responsive(handhelds) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0;
+    & > li {
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
     }
   }
 }

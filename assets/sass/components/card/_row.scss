@@ -29,7 +29,7 @@ $gutter: 2rem;
             @include responsive(handhelds){
                 background: $white;
                 padding-top: $gutter-sm;
-                padding-bottom: $gutter-sm;
+                padding-bottom: (5 * $gutter-sm);
             }
         }
     }

@@ -36,10 +36,20 @@ export default {
       font-size: 1.5rem;
       color: $white-03;
     }
+    @include responsive(handhelds) {
+      display: none;
+    }
   }
 
   @include responsive(handhelds) {
-    display: none;
+    box-shadow: 0 -0.3rem 0.6rem rgba($black, 0.08);
+    z-index: 100;
+    background: $white;
+    width: 100%;
+    height: auto;
+    top: unset;
+    bottom: 0;
+    padding: 1rem 3.1rem;
   }
 }
 </style>

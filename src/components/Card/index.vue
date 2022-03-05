@@ -76,6 +76,9 @@ export default {
   &__title {
     font-size: 2.4rem;
     margin-bottom: 3.3rem;
+    @include responsive(handhelds) {
+      margin-bottom: 2rem;
+    }
   }
   &__number {
     margin-bottom: 1.7rem;
