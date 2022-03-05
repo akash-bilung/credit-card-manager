@@ -27,9 +27,15 @@
           </div>
           <div class="card__col--rt">
             <accordion title="Card details" icon="Assets" class="mb-24">
-              <h4>Card details</h4>
+              <accordion-content>
+                <h4>Card details</h4>
+              </accordion-content>
             </accordion>
-            <accordion title="Recent transactions" icon="Transactions">
+            <accordion
+              title="Recent transactions"
+              open="true"
+              icon="Transactions"
+            >
               <accordion-content>
                 <card-list :lists="transactions" />
               </accordion-content>

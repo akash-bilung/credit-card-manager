@@ -30,10 +30,14 @@ export default {
       type: String,
       default: "",
     },
+    open: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
-      isOpen: false,
+      isOpen: this.open,
     };
   },
 };
