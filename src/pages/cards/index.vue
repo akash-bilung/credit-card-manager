@@ -1,6 +1,4 @@
 <template>
-  <!-- v-if="isModalOpen" -->
-  <modal title="Add New Card" comp="card"></modal>
   <content-box>
     <content-header :balance="balance" />
     <tabs>
@@ -73,12 +71,9 @@ import Accordion from "@/components/Ui/Accordion";
 import AccordionContent from "@/components/Ui/Accordion/Content";
 import AccordionFooter from "@/components/Ui/Accordion/Footer";
 
-import Modal from "@/components/Ui/Modal";
-
 export default {
   data() {
     return {
-      isModalOpen: false,
       activeCardIndex: null,
       isNumberVisible: false,
       splideOptions: {
@@ -120,7 +115,6 @@ export default {
     AccordionContent,
     AccordionFooter,
     CardList,
-    Modal,
   },
   computed: {
     ...mapGetters("cards", ["loadedCards"]),

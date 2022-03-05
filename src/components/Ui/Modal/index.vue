@@ -3,7 +3,7 @@
     <div class="modal__dialog">
       <p v-if="title" class="modal__title">{{ title }}</p>
 
-      <add-new-card v-if="comp === 'card'">
+      <add-new-card v-if="comp === 'card'" @form-submitted="cancel">
         <div class="modal__buttons">
           <button @click="cancel" class="moda__buttons-btn btn btn--gray-200">
             Cancel
@@ -33,7 +33,11 @@ export default {
   components: {
     AddNewCard,
   },
-  methods: {},
+  methods: {
+    cancel() {
+      this.$emit("closeModal");
+    },
+  },
 };
 </script>
 

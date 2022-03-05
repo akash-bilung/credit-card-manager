@@ -32,6 +32,7 @@
 
 <script>
 export default {
+  emits: ["form-submitted"],
   data() {
     return {
       form: {
@@ -51,8 +52,8 @@ export default {
       );
     },
     submitForm() {
-      // console.log(this.form);
       this.$store.dispatch("cards/addCard", this.form);
+      this.$emit("form-submitted", false);
     },
   },
 };

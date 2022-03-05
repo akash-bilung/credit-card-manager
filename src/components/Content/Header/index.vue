@@ -1,4 +1,10 @@
 <template>
+  <modal
+    title="Add New Card"
+    v-if="modalIsOpen"
+    comp="card"
+    @closeModal="closeModal"
+  ></modal>
   <div class="header">
     <p class="font--sm mb-16">Available balance</p>
     <div class="header__actions">
@@ -6,7 +12,10 @@
         <span class="header__amount-cur font--bold">S$</span>
         <span class="header__amount-num font--bold">{{ balance }}</span>
       </div>
-      <button class="btn btn--secondary-lt btn--icon header__btn">
+      <button
+        class="btn btn--secondary-lt btn--icon header__btn"
+        @click.prevent="modalIsOpen = !modalIsOpen"
+      >
         <img width="16" src="/icons/box.svg" alt="" />
         <span class="font--bold">New Card</span>
       </button>
@@ -15,11 +24,25 @@
 </template>
 
 <script>
+import Modal from "@/components/Ui/Modal";
 export default {
+  data() {
+    return {
+      modalIsOpen: false,
+    };
+  },
   props: {
     balance: {
       type: Number,
       default: null,
+    },
+  },
+  components: {
+    Modal,
+  },
+  methods: {
+    closeModal() {
+      this.modalIsOpen = false;
     },
   },
 };
