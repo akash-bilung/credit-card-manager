@@ -1,11 +1,11 @@
 <template>
   <div class="card">
     <div class="card__logo">
-      <img :src="card.bank" alt="" />
+      <img :src="card.bank.url" alt="" />
     </div>
-    <div class="card__title font--bold">{{ card.title }}</div>
+    <div class="card__title font--bold">{{ card.name }}</div>
     <ul class="card__number">
-      <li v-for="(number, index) in card.numbers" :key="index">
+      <li v-for="(number, index) in numbers" :key="index">
         <span class="font--md" v-if="isFirstThree(index)">
           &#9679; &#9679; &#9679; &#9679;
         </span>
@@ -19,11 +19,11 @@
       </li>
       <li>
         <span class="font--bold">CVV:</span>
-        <span class="font--lg">{{ card.cvv }}</span>
+        <span class="font--lg">***</span>
       </li>
     </ul>
     <div class="card__type">
-      <img :src="card.type" alt="" />
+      <img :src="type" alt="" />
     </div>
   </div>
 </template>
@@ -43,10 +43,18 @@ export default {
   },
   methods: {
     isFirstThree(index) {
-      return !this.card.visible && index + 1 !== this.card.numbers.length;
+      return !this.card.visible && index + 1 !== this.numbers.length;
     },
   },
-  computed: {},
+  computed: {
+    numbers() {
+      const num = this.card.numbers.match(/.{1,4}/g);
+      return num;
+    },
+    type() {
+      return `/icons/${this.card.type}.svg`;
+    },
+  },
 };
 </script>
 
@@ -73,11 +81,13 @@ export default {
     margin-bottom: 1.7rem;
     display: flex;
     align-items: center;
+    font-size: 1.4rem;
+    height: 2em;
     & > li {
+      letter-spacing: 2px;
       &:not(:last-child) {
         margin-right: 2.7rem;
       }
-      font-size: 1.4rem;
     }
   }
   &__details {

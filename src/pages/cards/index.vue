@@ -15,11 +15,15 @@
         </div>
         <div class="card__row">
           <div class="card__col--lt">
-            <Splide :options="splideOptions" class="mb-32">
-              <SplideSlide>
-                <card :card="card" />
-              </SplideSlide>
-              <SplideSlide>
+            <Splide
+              :options="splideOptions"
+              class="mb-32"
+              @splide:active="setActiveCardIndex"
+            >
+              <SplideSlide
+                v-for="(card, index) in mutatedCardsArr"
+                :key="index"
+              >
                 <card :card="card" />
               </SplideSlide>
             </Splide>
@@ -51,6 +55,8 @@
   </content-box>
 </template>
 <script>
+import { mapGetters } from "vuex";
+
 import ContentBox from "@/components/Content";
 import ContentHeader from "@/components/Content/Header";
 
@@ -67,6 +73,7 @@ import AccordionFooter from "@/components/Ui/Accordion/Footer";
 export default {
   data() {
     return {
+      activeCardIndex: null,
       isNumberVisible: false,
       splideOptions: {
         arrows: false,
@@ -144,18 +151,26 @@ export default {
     CardList,
   },
   computed: {
-    card() {
-      let card = {
-        visible: false,
-        bank: "/images/base/Logo-light.svg",
-        title: "Mark Henry",
-        numbers: ["1234", "5678", "9012", "3456"],
-        expiry: new Date(),
-        cvv: "***",
-        type: "/icons/Visa.svg",
-      };
-      return card;
+    ...mapGetters("cards", ["loadedCards"]),
+    mutatedCardsArr() {
+      const cards = this.loadedCards;
+      cards.forEach((element) => {
+        return (element.visible = false);
+      });
+      return cards;
     },
+  },
+  methods: {
+    setActiveCardIndex(splide) {
+      this.activeCardIndex = splide.index;
+    },
+    showCardNumbers() {
+      this.isNumberVisible = !this.isNumberVisible;
+      this.mutatedCardsArr[this.activeCardIndex].visible = this.isNumberVisible;
+    },
+  },
+  created() {
+    this.$store.dispatch("cards/fetchCards");
   },
 };
 </script>
