@@ -5,7 +5,7 @@ Made with Vue3 and Sass.
 #### [Demo URL](https://aspire-fe-05.herokuapp.com/cards)
 ## Dependencies
 
-Dillinger uses a number of open source projects to work properly:
+This app uses a number of open source projects to work properly:
 
 - [Splide JS](https://splidejs.com/) - flexible, lightweight (27kB) and accessible slider written in TypeScript!
 - [Ace Editor] - awesome web-based text editor
