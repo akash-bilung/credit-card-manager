@@ -1,0 +1,48 @@
+{
+   "data":[
+      {
+         "id":1,
+         "icon":"file-storage",
+         "title":"Hamleys",
+         "date":"2022-03-11T18:30:00.000Z",
+         "label":{
+            "text":"Refund on debit card"
+         },
+         "amount":150,
+         "type":"debit"
+      },
+      {
+         "id":1,
+         "icon":"flights",
+         "title":"Hamleys",
+         "date":"2022-03-11T18:30:00.000Z",
+         "label":{
+            "text":"Charged to debit card"
+         },
+         "amount":150,
+         "type":"credit"
+      },
+      {
+         "id":1,
+         "icon":"megaphone",
+         "title":"Hamleys",
+         "date":"2022-03-11T18:30:00.000Z",
+         "label":{
+            "text":"Charged to debit card"
+         },
+         "amount":150,
+         "type":"debit"
+      },
+      {
+         "id":1,
+         "icon":"file-storage",
+         "title":"Hamleys",
+         "date":"2022-03-11T18:30:00.000Z",
+         "label":{
+            "text":"Refund on debit card"
+         },
+         "amount":150,
+         "type":"debit"
+      }
+   ]
+}

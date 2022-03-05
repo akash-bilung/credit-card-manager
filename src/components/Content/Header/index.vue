@@ -4,7 +4,7 @@
     <div class="header__actions">
       <div class="header__amount">
         <span class="header__amount-cur font--bold">S$</span>
-        <span class="header__amount-num font--bold">3,000</span>
+        <span class="header__amount-num font--bold">{{ balance }}</span>
       </div>
       <button class="btn btn--secondary-lt btn--icon">
         <img width="16" src="/icons/box.svg" alt="" />
@@ -15,7 +15,14 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    balance: {
+      type: Number,
+      default: null,
+    },
+  },
+};
 </script>
 
 <style lang="scss">

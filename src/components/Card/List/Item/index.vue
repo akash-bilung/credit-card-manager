@@ -5,7 +5,9 @@
     </div>
     <div class="card__list_content">
       <h4 class="font--sm mb-05">{{ item.title }}</h4>
-      <p class="font--xs text--gray-150 mb-14">{{ item.date }}</p>
+      <p class="font--xs text--gray-150 mb-14">
+        {{ moment(item.date).format("DD MMM YYYY") }}
+      </p>
       <div class="card__list__label">
         <div class="card__list__label_icon">
           <img src="/icons/business-and-finance.svg" alt="" />
@@ -19,13 +21,14 @@
       class="card__list_action font--bold font--sm"
       :class="{ 'text--primary': item.type === 'debit' }"
     >
-      <span>{{ item.amount }}</span>
+      <span>{{ amountStr }}</span>
       <img height="12" src="/icons/Next.svg" alt="" />
     </button>
   </li>
 </template>
 
 <script>
+import moment from "moment";
 export default {
   props: {
     item: {
@@ -37,6 +40,16 @@ export default {
     icon() {
       return `/icons/${this.item.icon}.svg`;
     },
+    amountStr() {
+      let type = "+";
+      if (this.item.type === "debit") {
+        type = "-";
+      }
+      return `${type} S$ ${this.item.amount}`;
+    },
+  },
+  created() {
+    this.moment = moment;
   },
 };
 </script>

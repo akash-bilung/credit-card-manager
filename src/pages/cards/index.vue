@@ -1,6 +1,6 @@
 <template>
   <content-box>
-    <content-header />
+    <content-header :balance="balance" />
     <tabs>
       <tab-item title="My debit cards">
         <div class="flex flex-hCenter mb-12">
@@ -41,7 +41,7 @@
               icon="Transactions"
             >
               <accordion-content>
-                <card-list :lists="transactions" />
+                <card-list :lists="loadedTransactions" />
               </accordion-content>
               <accordion-footer title="View all card transactions" />
             </accordion>
@@ -101,41 +101,6 @@ export default {
           icon: "Deactivate-card",
         },
       ],
-      transactions: [
-        {
-          id: 1,
-          icon: "file-storage",
-          title: "Hamleys",
-          date: "20 May 2020",
-          label: {
-            text: "Refund on debit card",
-          },
-          amount: "+ S$ 150",
-          type: "debit",
-        },
-        {
-          id: 1,
-          icon: "file-storage",
-          title: "Hamleys",
-          date: "20 May 2020",
-          label: {
-            text: "Refund on debit card",
-          },
-          amount: "+ S$ 150",
-          type: "credit",
-        },
-        {
-          id: 1,
-          icon: "file-storage",
-          title: "Hamleys",
-          date: "20 May 2020",
-          label: {
-            text: "Refund on debit card",
-          },
-          amount: "+ S$ 150",
-          type: "credit",
-        },
-      ],
     };
   },
   components: {
@@ -152,12 +117,20 @@ export default {
   },
   computed: {
     ...mapGetters("cards", ["loadedCards"]),
+    ...mapGetters("transactions", ["loadedTransactions"]),
     mutatedCardsArr() {
       const cards = this.loadedCards;
       cards.forEach((element) => {
         return (element.visible = false);
       });
       return cards;
+    },
+    balance() {
+      let balance = null;
+      this.loadedTransactions.forEach((e) => {
+        balance += e.amount;
+      });
+      return balance;
     },
   },
   methods: {
@@ -171,6 +144,7 @@ export default {
   },
   created() {
     this.$store.dispatch("cards/fetchCards");
+    this.$store.dispatch("transactions/fetchTransactions");
   },
 };
 </script>
