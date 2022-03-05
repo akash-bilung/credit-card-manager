@@ -16,7 +16,9 @@
             <card-actions :actions="actions" />
           </div>
           <div class="card__col--rt">
-            <accordion title="Recent transactions"> Hello </accordion>
+            <accordion title="Recent transactions" icon="Transactions">
+              Hello
+            </accordion>
           </div>
         </div>
       </tab-item>
