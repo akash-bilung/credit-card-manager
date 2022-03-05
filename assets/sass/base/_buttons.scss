@@ -39,4 +39,12 @@
       background: $secondary-lt;
       color: $white;
     }
+    &--success {
+      background: $success;
+      color: $white;
+    }
+    &--danger {
+      background: $danger;
+      color: $white;
+    }
 }
