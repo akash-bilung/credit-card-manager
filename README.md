@@ -2,7 +2,7 @@
 ![](https://global-uploads.webflow.com/5ed5b60be1889f546024ada0/5ed8a32c8e1f40c8d24bc32b_Aspire%20Logo%402x.png)
 
 Made with Vue3 and Sass.
-#### [Demo URL](https://aspire-fe-test-6ok2wi88p-akash-bilung.vercel.app/cards)
+#### [Demo URL](https://aspire-fe-test.vercel.app/cards)
 ## Dependencies
 
 This app uses a number of open source projects to work properly:
