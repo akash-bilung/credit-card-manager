@@ -1,5 +1,4 @@
-
-![](https://global-uploads.webflow.com/5ed5b60be1889f546024ada0/5ed8a32c8e1f40c8d24bc32b_Aspire%20Logo%402x.png)
+# Fintech Credit Card Manager
 
 Made with Vue3 and Sass.
 #### [Demo URL](https://aspire-fe-test.vercel.app/cards)
