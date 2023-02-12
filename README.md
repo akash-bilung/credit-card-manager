@@ -1,7 +1,7 @@
 # Fintech Credit Card Manager
 
 Made with Vue3 and Sass.
-#### [Demo URL](https://aspire-fe-test.vercel.app/cards)
+#### [Demo URL](https://credit-card-manager.vercel.app/cards)
 ## Dependencies
 
 This app uses a number of open source projects to work properly:
