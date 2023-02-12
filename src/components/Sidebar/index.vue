@@ -1,7 +1,7 @@
 <template>
   <aside class="sidebar">
     <div class="sidebar__header">
-      <img src="/images/base/Logo.svg" class="sidebar__header_logo" />
+      <div class="sidebar__header_logo">FCCM</div>
       <p class="sidebar__header_title">
         Trusted way of banking for 3,000+ SMEs and startups in Singapore
       </p>
@@ -29,7 +29,10 @@ export default {
 
   &__header {
     &_logo {
-      max-width: 12.5rem;
+      color: $primary;
+      font-size: 3rem;
+      font-weight: 800;
+      // max-width: 12.5rem;
       margin-bottom: 1.9rem;
     }
     &_title {
